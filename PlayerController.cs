@@ -21,8 +21,6 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        //transform.Translate(vector3.forward) = transform.Translate (0, 0, 1);
-        //Time.deltaTime vas faire en sorte que ca soit plus par frame mais par sec donc si vector3.forward le vehicule avancera de 1m chaque seconde
         transform.Translate(Vector3.forward *Time.deltaTime * speed * verticalInput);
         transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
     }
